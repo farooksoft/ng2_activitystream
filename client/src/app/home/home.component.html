@@ -1,7 +1,6 @@
-<div>
 <!-- Navigation -->
 <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-  <div class="container">
+  <!-- <div class="container"> -->
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header page-scroll">
 
@@ -15,6 +14,9 @@
         <li class="hidden">
           <a href="#page-top"></a>
         </li>
+
+        
+
         <li>
           <a href="circles.html"><i class="a fa-fw fa-circles-o"></i> Circles</a>
           <!-- <a class="page-scroll" href="#circle">Cicles</a> -->
@@ -29,40 +31,44 @@
       </ul>
     </div>
     <!-- /.navbar-collapse -->
-  </div>
+  <!-- </div> -->
   <!-- /.container-fluid -->
 </nav>
-<div class="container-fluid">
-  <div class="row-fluid">
+<div class="row">
+    <!-- <div class=""> -->
 
-    <div class="span2" style="background-color:grey;">
-      <h3>List of Registered Users</h3>
-    </div>
+      <div class="col-lg-2" >
+        <p>List of circles</p>
+      </div>
 
-    <div class="span10" style="background-color:#fff;">
-      <div class="panel-body">
-        <div class="table-responsive">
-          <table class="table table-bordered table-hover table-striped">
-            <thead>
-              <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>User Name</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody *ngFor="let user of users">
-              <tr>
-                <td>{{user.username}}</td>
-                <td>{{user.firstName}}</td>
-                <td>{{user.lastName}}</td>
-                <td><a (click)="deleteUser(user.id)">Delete</a></td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="col-lg-10" style="background-color:#fff;">
+        <div class="panel-body">
+          <div class="table-responsive">
+          <h2 align = "center">Messge Inbox</h2>
+            <table class="table table-bordered table-hover table-striped">
+              <thead>
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>User Name</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody *ngFor="let user of users">
+                <tr>
+                  <td>{{user.firstName}}</td>
+                  <td>{{user.lastName}}</td>
+                  <td>{{user.username}}</td>
+                  <td><a (click)="deleteUser(user.id)">Delete</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-    </div>
+    <!-- </div> -->
   </div>
-</div>
-</div>
+
+
+
+
